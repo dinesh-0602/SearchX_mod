@@ -63,8 +63,7 @@ def unauthorize(update, context):
     sendMessage(msg, context.bot, update.message)
 
 def auth_users(update, context):
-    users = ''
-    users += '\n'.join(f"<code>{user}</code>" for user in AUTHORIZED_USERS)
+    users = '' + '\n'.join(f"<code>{user}</code>" for user in AUTHORIZED_USERS)
     msg = f'<b><u>Authorized Users</u></b>\n{users}'
     sendMessage(msg, context.bot, update.message)
 
